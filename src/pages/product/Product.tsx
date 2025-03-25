@@ -4,9 +4,8 @@ import editProduct from "./api/editProduct";
 import deleteProduct from "./api/deleteProduct";
 import fetchProducts from "./api/fetchProducts";
 import { alertTrue, alertError } from "./api/alert";
-// import Swal from "sweetalert2";
-import Swal, { SweetAlertOptions } from "sweetalert2";
-// import {Swal,SweetAlertOptions} from "sweetalert2";
+import  {SweetAlertOptions } from "sweetalert2";
+import  Swal from "sweetalert2";
 
 
 interface Product {
