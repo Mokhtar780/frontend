@@ -173,7 +173,7 @@ const Product: React.FC = () => {
         <>
       <br />
       <button
-        className="btn btn-outline-success"
+        className="btn btn-outline-success sm"
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
@@ -184,25 +184,25 @@ const Product: React.FC = () => {
       <table className=" table text-center">
         <thead >
           <tr className="row">
-            {/* <th className="col-1">رقم</th> */}
+            <th className="col-1">رقم</th>
             <th className="col-2">صورة</th>
             <th className="col-2">العنوان</th>
             <th className="col-1">سعر</th>
-            <th className="col-2">وصف</th>
-            <th className="col-2 text-info" style={{font:"bold"}}><b>  أزرار الأحــــــــــــــــــــداث </b></th>
+            <th className="col-3">وصف</th>
+            <th className="col-3 text-info" style={{font:"bold"}}><b>  أزرار الأحــــــــــــــــــــداث </b></th>
           </tr>
         </thead>
         <tbody className="table-group-divider">
           { products.map((product) => (
-              <tr className="row" key={product.id}>
-                {/* <th  className="col-1">{product.id}</th> */}
+              <tr className="row sm" key={product.id}>
+                <th  className="col-1">{product.id}</th>
                 <td  className="col-2">
                 
                   <img src={product.image} alt="product" style={{
-                                                                  maxWidth: 60,
-                                                                  maxHeight: 60,
-                                                                  minWidth: 60,
-                                                                  minHeight: 60,
+                                                                  maxWidth: 80,
+                                                                  maxHeight: 80,
+                                                                  minWidth: 80,
+                                                                  minHeight: 80,
                                                                   marginRight: 0,
                                                                   borderRadius: "50%",
                                                                   border: "1px solid blue",
@@ -210,8 +210,8 @@ const Product: React.FC = () => {
                 </td>
                 <td  className="col-2">{product.title.slice(0, 10)}</td>
                 <td  className="col-1">${product.price}</td>
-                <td  className="col-2">{product.description.slice(0, 25)} ...</td>
-                <td className="col-2">
+                <td  className="col-3">{product.description.slice(0, 25)} ...</td>
+                <td className="col-3">
                     <button
                     className="btn btn-outline-info btn-sm"
                     onClick={() => {
